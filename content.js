@@ -15,4 +15,4 @@ node = document.getElementById('ext-styles');
 node.insertAdjacentHTML('beforeend', css2);
 
 var myobj = document.getElementById("logo-icon");
-myobj.remove();9
+myobj.remove();
