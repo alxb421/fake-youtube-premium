@@ -5,16 +5,24 @@ var full = part1 + part2
 var css1 = `<style> .nice-logo-container.nice-logo,nice-logo{display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;vertical-align:middle;fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);width:var(--iron-icon-width,24px);height:var(--iron-icon-height,24px);margin-left:var(--iron-icon_-_margin-left);margin-bottom:var(--iron-icon_-_margin-bottom);margin-right:var(--iron-icon_-_margin-right);width:var(--iron-icon_-_width,var(--iron-icon-width,24px));height:var(--iron-icon_-_height,var(--iron-icon-height,24px));margin-top:var(--iron-icon_-_margin-top)}</style>`
 var css2 = `nice-logo.ytd-topbar-logo-renderer{height:20px;width:90px;padding:18px 14px 18px 16px;color:var(--yt-spec-wordmark-text);-ms-flex:none;-webkit-flex:none;flex:none}`
 
-node = document.getElementById('logo-icon');
-node.insertAdjacentHTML('afterend', full);
+original_logo = document.getElementById('logo-icon');
+original_logo.insertAdjacentHTML('afterend', full);
 
-node = document.getElementById('ext-styles');
-node.insertAdjacentHTML('afterend', css1);
+cssfile1 = document.getElementById('ext-styles');
+cssfile1.insertAdjacentHTML('afterend', css1);
 
-node = document.getElementById('ext-styles');
-node.insertAdjacentHTML('beforeend', css2);
+cssfile2 = document.getElementById('ext-styles');
+cssfile2.insertAdjacentHTML('beforeend', css2);
 
-window.addEventListener("load", function(){
-    var myobj = document.getElementById("logo-icon");
-    delay(1000).then(() => myobj.remove();
-});
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
+document.getElementsByClassName("style-scope ytd-logo").remove();
