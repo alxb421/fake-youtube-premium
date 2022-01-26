@@ -27,6 +27,7 @@ It shows Premium instead of YouTube just like you bought a subscription for YouT
  - v0.3.0:
     - The script is loaded on YouTube only
     - No more errors in the [Extension Settings](chrome://extensions)
+    - Cleaned source tree by adding icons in the icons folder and js scripts in js folder
 
 - v0.2.0:
     - Fixed youtube having 2 logos (youtube and premium logo)
