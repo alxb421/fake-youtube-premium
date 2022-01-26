@@ -14,5 +14,7 @@ node.insertAdjacentHTML('afterend', css1);
 node = document.getElementById('ext-styles');
 node.insertAdjacentHTML('beforeend', css2);
 
-var myobj = document.getElementById("logo-icon");
-myobj.remove();
+window.addEventListener("load", function(){
+    var myobj = document.getElementById("logo-icon");
+    delay(1000).then(() => myobj.remove();
+});
