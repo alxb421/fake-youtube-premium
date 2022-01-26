@@ -24,7 +24,11 @@ It shows Premium instead of YouTube just like you bought a subscription for YouT
  - Visit the Chrome Web Store: [Extension webpage](https://chrome.google.com/webstore/detail/fake-youtube-premium/bejbliggnadcmgfifpipkkebkmpbibai)
 
 ## Changelog:
- - v0.2.0:
+ - v0.3.0:
+    - The script is loaded on YouTube only
+    - No more errors in the [Extension Settings](chrome://extensions)
+
+- v0.2.0:
     - Fixed youtube having 2 logos (youtube and premium logo)
     - Added Window On Load function
     - Added 1000ms (1 second) delay inside the On Load Function
