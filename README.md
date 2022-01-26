@@ -20,6 +20,9 @@ It shows Premium instead of YouTube just like you bought a subscription for YouT
  - built in downloader
  - Download button under the video
 
+## How do I get it?
+ - Visit the Chrome Web Store: [Extension webpage](https://chrome.google.com/webstore/detail/fake-youtube-premium/bejbliggnadcmgfifpipkkebkmpbibai)
+
 ## Changelog:
  - v0.2.0:
     - Fixed youtube having 2 logos (youtube and premium logo)
