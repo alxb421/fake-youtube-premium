@@ -2,13 +2,13 @@
   "manifest_version": 2,
 
   "name": "Fake YouTube premium",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "description": "It changes the YouTube logo to Premium logo to fake having YouTube Premium",
 
-  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
 
   "content_scripts": [{
-    "js": ["content.js"],
+    "js": ["js/content.js"],
     "matches": ["*://*.youtube.com/*"]
   }]
 
